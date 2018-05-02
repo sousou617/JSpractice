@@ -44,29 +44,30 @@
 
 //  ----Question 3
 
-function checkInput(x) {
-	if (x == 5) {
-		return "number";
-	}
-	if (x == 'hello') {
-		return "string";
-	}
-	if (x == true) {
-		return Boolean;
-	}
-	else {
-		return("-1")
-	}
-}
+// function checkInput(x) {
+// 	if (x == 5) {
+// 		return "number";
+// 	}
+// 	if (x == 'hello') {
+// 		return "string";
+// 	}
+// 	if (x == true) {
+// 		return Boolean;
+// 	}
+// 	else {
+// 		return("-1")
+// 	}
+// }
 
-console.log(checkInput(true))
+// console.log(checkInput(true))
 
 
-function checkInput(x) {
-	var boolVal = true;
-	var stringVal = 'hello';
-	var numVal = 5;
-}
+
+// function checkInput(x) {
+// 	var boolVal = true;
+// 	var stringVal = 'hello';
+// 	var numVal = 5;
+// }
 
 
 
@@ -74,8 +75,9 @@ function checkInput(x) {
 
 
 // function simpleEvenAdding(num) {
-// 	for (i=2; i<=num; i=i+2) {
+// 	for (let i=2; i<=num; i=i+2) {
 // 		console.log(i)
+// 		// or return i += i;
 // 	}
 // }
 // simpleEvenAdding(10)
@@ -84,18 +86,24 @@ function checkInput(x) {
 //  ----Question 5
 
 // function letterCapitalize(str) {
-// 	var c = [];
+// 	var cap = [];
 // 	var sep = str.split(" ");
 // 	for (i=0; i<sep.length; i++) {
-// 		c.push(sep[i][0].toUpperCase()+sep[i].slice(1));
+// 		cap.push(sep[i][0].toUpperCase()+sep[i].slice(1));
 // 	}
-// 	return c.join(" ");
+// 	return cap.join(" ");
 // }
 
-// console.log(letterCapitalize("hello world"))
+// console.log(letterCapitalize("hello world"));
 
-// console.log(letterCapitalize('you cannot find the answer online'))
+// console.log(letterCapitalize('you cannot find the answer online'));
 
+// //or
+
+// function letterCapitalize(str) {
+// 	var strArray - str.split(" ")
+// 	return strArray
+// }
 
 // //  ----Question 6
 
@@ -110,9 +118,12 @@ function checkInput(x) {
 // 	console.log(simpleReverse("I Love Code"));
 
 
+// try "hello".split, then .reverse(), then to join
+
 // //  ---- Question 7
 
-// 	var arr =[1,2,4,6,20,3]
+// function findDiff(arr)
+// 	var arr =[1,2,4,6,20,3];
 // 	var max = arr[0];
 // 	for (var i=0; i<arr.length;i++) {
 // 		if (arr[i]>= max){
@@ -120,8 +131,6 @@ function checkInput(x) {
 // 		}
 // 		console.log(max);
 // 	}
-
-
 
 //  ----Question 8
 
@@ -137,15 +146,31 @@ function checkInput(x) {
 
 // console.log(timeConvert(90)); 
 
-
+  // or return parseInt(num / 60)
 
 
 
 //  ----Question 9
 
 
+// function findStr() {
+// 	var str = "hi";
+// 	var long = "asdfhijklahisdfjhikl";
+// 	var editStr = (long.slice(4,6))
 
+// console.log(findStr);
+// }
 
+// function findStr( str, long) {
+
+// 	let len = str.length;
+// 	let longArr = [];
+// 	//split the length = 2
+// 	for (let i=0; i<long.length; i++) {
+// 		console.log(long.slice(i,i+len))
+// 	}
+// }
+//  findStr("h", "hello")
 
 
 
@@ -169,27 +194,27 @@ function checkInput(x) {
 
 
 
-// var selfDividingNumbers = function(left, right) {
-//     var selfDiv = [], result;
+function selfDividingNumbers(left, right) {
+    var selfDiv = [], result;
     
-//     for(left; left < right +1; left++) {
-//         for(var i=0; i<left.toString().length; i++) {
-//             if(left % left.toString().charAt(i) === 0 && left.toString().charAt(i) !== 0 ) {
-//                 result = true;
-//             }
-//             else {
-//                 result = false;
-//                 break;
-//             }
-                
-//         }
-//         if(result == true)
-//             selfDiv.push(left);
-//     }
+    for(left; left <= right +1; left++) {
+        for(var i=0; i<left.toString().length; i++) {
+        	//check if i is selfDiv number
+            if(left % left.toString().charAt(i) === 0 && left.toString().charAt(i) !== 0 ) {
+                result = true;
+            }
+            else {
+                result = false;
+                break;
+            }
+        }
+        if(result == true)
+            selfDiv.push(left);
+    }
     
-//     return selfDiv;
-// };
-
+    return selfDiv;
+};
+console.log(selfDividingNumbers(1, 22))
 
 
 
