@@ -33,6 +33,7 @@
 
 // // ----Questions 2
 
+
 // function printIntRev(n) {
 // 	for (i=n; i>=1; i--) {
 // 	console.log(i);
@@ -41,37 +42,51 @@
 // printIntRev(10);
 
 
+//  //----Question 3
 
-//  ----Question 3
 
 // function checkInput(x) {
-// 	if (x == 5) {
-// 		return "number";
+// 	if (typeof x === 'number') {
+// 		return 'number';
 // 	}
-// 	if (x == 'hello') {
+// 	if (typeof x == typeof " ") {
 // 		return "string";
 // 	}
-// 	if (x == true) {
+// 	if (typeof x == typeof true) {
 // 		return Boolean;
 // 	}
 // 	else {
-// 		return("-1")
+// 		return(-1)
 // 	}
 // }
 
-// console.log(checkInput(true))
+// console.log(checkInput(617-952))
 
 
-
-// function checkInput(x) {
-// 	var boolVal = true;
-// 	var stringVal = 'hello';
-// 	var numVal = 5;
-// }
+  // function checkInput(x) 
 
 
+  switch(checkInput) {
+    case 5:
+      console.log('number');
+      break;
+    case "hello":
+      console.log('string');
+      break;
+    case "5":
+      console.log('string');
+      break;
+    case true:
+      console.log('boolean');
+      break;
+    default:
+      console.log('-1');
+	}
 
-//  ----Question 4
+	console.log(checkInput(5))
+
+
+//  //----Question 4
 
 
 // function simpleEvenAdding(num) {
@@ -83,7 +98,8 @@
 // simpleEvenAdding(10)
 
 
-//  ----Question 5
+//  //----Question 5
+
 
 // function letterCapitalize(str) {
 // 	var cap = [];
@@ -101,11 +117,20 @@
 // //or
 
 // function letterCapitalize(str) {
-// 	var strArray - str.split(" ")
-// 	return strArray
-// }
+// 	var arr = str.split(" ");
+// 	var final = arr.map(
+// 		function(val) {
+// 			return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+// 		});
+// 	return final.join(" ");
+// };
+//  console.log("hello world")
+//  console.log('you cannot find the answer online.')
+
+
 
 // //  ----Question 6
+
 
 // function simpleReverse(str) {
 // 	 var final = "";
@@ -118,23 +143,58 @@
 // 	console.log(simpleReverse("I Love Code"));
 
 
-// try "hello".split, then .reverse(), then to join
+// try "hello".split, then .reverse(), then to join ----
+
+// function simpleReverse(str) {
+	
+// return str.split("").reverse()
+// 	return join("");
+// }
+// console.log('Hello')
+
 
 // //  ---- Question 7
 
+// function findDiff(a){  
+//   var max=Math.max.apply(0, a),
+//     slot=a.lastIndexOf(max),
+//     min=Math.min.apply(0, a.slice(0, slot));
+//   if(a.length && !slot && !min-.153479 )return findDiff(a.slice(1));
+//   return max-min;
+// }
+
+// console.log(findDiff([4, 7, 8, 12]))
+
+
+
+// function findDiff(arr) {
+// maxdiff = 0;
+// a =  [24,22,23,22,24]
+// for (i=a.length-1; i >= 0; i--) {
+//   for (j=i-1; j >= 0; j--) {
+//     if (a[i] < a[j] ) continue;
+//     if (a[i] -a[j] > maxdiff) maxdiff = a[i] -a[j]
+//   }
+// return maxdiff
+// }
+// }
+// console.log(findDiff([24,22,23,22,24]))
+
+
+
 // function findDiff(arr)
-// 	var arr =[1,2,4,6,20,3];
+// 	var arr =[]
 // 	var max = arr[0];
 // 	for (var i=0; i<arr.length;i++) {
 // 		if (arr[i]>= max){
 // 			max = arr[i];
 // 		}
-// 		console.log(max);
+// 		return max();
 // 	}
+// 	console.log(findDiff(arr));
 
-//  ----Question 8
 
-
+//  // ----Question 8
 
 
 // function timeConvert(num) {
@@ -146,80 +206,114 @@
 
 // console.log(timeConvert(90)); 
 
-  // or return parseInt(num / 60)
 
 
 
-//  ----Question 9
+
+//  // ----Question 9
 
 
-// function findStr() {
-// 	var str = "hi";
-// 	var long = "asdfhijklahisdfjhikl";
-// 	var editStr = (long.slice(4,6))
-
-// console.log(findStr);
-// }
-
-// function findStr( str, long) {
+// function findStr(str, long) {
 
 // 	let len = str.length;
 // 	let longArr = [];
 // 	//split the length = 2
 // 	for (let i=0; i<long.length; i++) {
-// 		console.log(long.slice(i,i+len))
+// 		(long.slice(i,i+len))
+// 	};
+// 	if (str == "h") {
+// 		result = true;
+// 	} else {
+// 		result = false;
 // 	}
 // }
-//  findStr("h", "hello")
+//  console.log(findStr("h", "hello"))
 
 
+//  // ----Question 10
 
 
+// function selfDividingNumbers(left, right) {
+//     var selfDiv = []; 
+    
+//     for(left=0; left <= right +1; left++) {
+//         for(var i=0; i<left.toString().length; i++) {
+//         	//check if i is selfDiv number
+//             if(left % left.toString().charAt(i) === 0 && left.toString().charAt(i) !== 0 ) {
+//                 result = true;
+//             }
+//             else {
+//                 result = false;
+//             }
+//         }
+//         	if(result == true)
+//             selfDiv.push(left);
+//     }
+    
+//     return selfDiv;
+// };
+// console.log(selfDividingNumbers(1, 22))
+
+// // ----------or -----
+
+// var selfDividingNumbers = function(left, right)  {
+//     var nums = [];
+//     var selfDiv = function(num){
+//     var numStr = '' + num;
+        
+//         for (var i=0; i<numStr.length; i++){
+//             if (num % +numStr[i] !== 0) {
+//                 return false;
+//             }
+//         }
+        
+//         return true;
+//     }
+
+    
+//     for (var i = left; i <= right; i++){
+//         if (selfDiv(i)) {
+//             nums.push(i);
+//         }
+//     }
+    
+//     return nums;
+// };
+
+// console.log(selfDividingNumbers(1,22))
 
 
+//  // ----Question EC
 
 
+// var moveZeroes = function(nums) {
+//     var i;
+//     for (i = nums.length-1; i>=0; i--)
+// 	  	OR for (i = 0; i < nums.length-1; i++) {
+//         if(nums[i] === 0) {
+//             nums.splice(i, 1);
+//             nums.push(0);
+//         }
+//     }
+//     return;
 
-//  ----Question 10
+//   console.log([3,2,0,34,5,0,11])
+// };
 
+//   // trying to figure out another way--------??
 
+// function moveZeroes() {
+// 	arr[] = {0,2,5,0,3,9,0,11};
+// 	len = arr.length;
+// 	count = 0;
 
-// function selfDividingNumbers(left, right)
-// for (var i=left; i<=right; i++) {
-// 	var dec = i;
-// 	var res=0;
-
+// 	for (let i = 0; i<len; i++) {
+// 		if(arr[i] != 0) {
+// 			arr[count++] = arr[i];
+// 		}
+// 	}
+// 	while (count < len) {
+// 		arr[count++] = 0;
+// 	}
+// 	console.log()
 // }
-
-
-
-
-function selfDividingNumbers(left, right) {
-    var selfDiv = [], result;
-    
-    for(left; left <= right +1; left++) {
-        for(var i=0; i<left.toString().length; i++) {
-        	//check if i is selfDiv number
-            if(left % left.toString().charAt(i) === 0 && left.toString().charAt(i) !== 0 ) {
-                result = true;
-            }
-            else {
-                result = false;
-                break;
-            }
-        }
-        if(result == true)
-            selfDiv.push(left);
-    }
-    
-    return selfDiv;
-};
-console.log(selfDividingNumbers(1, 22))
-
-
-
-
-
-
-
-//  ----Question EC
