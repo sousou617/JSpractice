@@ -66,6 +66,7 @@
   // function checkInput(x) 
 
 
+<<<<<<< HEAD
  //  switch(checkInput) {
  //    case 5:
  //      console.log('number');
@@ -84,6 +85,26 @@
 	// }
 
 	// console.log(checkInput(5))
+=======
+//   switch(checkInput) {
+//     case 5:
+//       console.log('number');
+//       break;
+//     case "hello":
+//       console.log('string');
+//       break;
+//     case "5":
+//       console.log('string');
+//       break;
+//     case true:
+//       console.log('boolean');
+//       break;
+//     default:
+//       console.log('-1');
+// 	}
+
+// 	console.log(checkInput(5))
+>>>>>>> 50d5f2827402d02816140ec0bb6655fbdf2b943e
 
 
 //  //----Question 4
