@@ -49,34 +49,40 @@
 // 	if (typeof x === 'number') {
 // 		return 'number';
 // 	}
-// 	if (typeof x == typeof " ") {
+// 	else if (typeof x ==  " ") {
 // 		return "string";
 // 	}
-// 	if (typeof x == typeof true) {
+// 	else if (typeof x == "Boolean") {
 // 		return Boolean;
 // 	}
 // 	else {
 // 		return(-1)
 // 	}
 // }
+// console.log(checkInput(1234))
 
-// console.log(checkInput(617-952))
+
+// var type = typeof x;
+// if (type =='number' || type == 'string' || type == 'boolean') {
+// 	return type
+// } else {
+// 	return -1;
+// }
+// console.log(false)
+
 
 
   // function checkInput(x) 
 
- //  switch(checkInput) {
- //    case 5:
- //      console.log('number');
+ //  switch(type) {
+ //    case 'number':
+ //      console.log('type');
  //      break;
- //    case "hello":5
- //      console.log('string');
+ //    case "string":
+ //      console.log('type');
  //      break;
- //    case "5":
- //      console.log('string');
- //      break;
- //    case true:
- //      console.log('boolean');
+ //    case "boolean":
+ //      console.log('type');
  //      break;
  //    default:
  //      console.log('-1');
@@ -91,7 +97,7 @@
 // function simpleEvenAdding(num) {
 // 	for (let i=2; i<=num; i=i+2) {
 // 		console.log(i)
-// 		// or return i += i;
+// 		//OR if (1 % 2 == 0); return i += i; 
 // 	}
 // }
 // simpleEvenAdding(10)
@@ -126,6 +132,17 @@
 //  console.log("hello world")
 //  console.log('you cannot find the answer online.')
 
+// //given
+
+// function letterCapitalize(str) {
+// 	var splitedArray = str.split(" ");
+// 	var newString = "";
+// 	for(var i = 0; i<splitedArray.length; i++) {
+// 		newString += " " + splitedArray[i][0].toUpperCase() + splitedArray[i].slice(1);
+// 	}
+// 	return " ";
+// }
+// console.log("hello world")
 
 
 // //  ----Question 6
@@ -146,19 +163,19 @@
 
 // function simpleReverse(str) {
 	
-// return str.split("").reverse()
-// 	return join("");
+// return str.split("").reverse().join("");
 // }
-// console.log('Hello')
+// console.log('Hello, People!')
+
 
 
 // //  ---- Question 7
 
-// function findDiff(a){  
-//   var max=Math.max.apply(0, a),
-//     slot=a.lastIndexOf(max),
-//     min=Math.min.apply(0, a.slice(0, slot));
-//   if(a.length && !slot && !min-.153479 )return findDiff(a.slice(1));
+// function findDiff(arr){  
+//   var max=Math.max.apply(0, arr),
+//     slot=arr.lastIndexOf(max),
+//     min=Math.min.apply(0, arr.slice(0, slot));
+//   if(arr.length && !slot && !min-.153479 )return findDiff(arr.slice(1));
 //   return max-min;
 // }
 
@@ -167,14 +184,14 @@
 
 
 // function findDiff(arr) {
-// maxdiff = 0;
+// maxDiff = 0;
 // a =  [24,22,23,22,24]
 // for (i=a.length-1; i >= 0; i--) {
 //   for (j=i-1; j >= 0; j--) {
 //     if (a[i] < a[j] ) continue;
-//     if (a[i] -a[j] > maxdiff) maxdiff = a[i] -a[j]
+//     if (a[i] -a[j] > maxDiff) maxDiff = a[i] -a[j]
 //   }
-// return maxdiff
+// return maxDiff
 // }
 // }
 // console.log(findDiff([24,22,23,22,24]))
@@ -182,15 +199,19 @@
 
 
 // function findDiff(arr)
-// 	var arr =[]
+// 	var arr =[];
 // 	var max = arr[0];
 // 	for (var i=0; i<arr.length;i++) {
-// 		if (arr[i]>= max){
+// 		if (arr[i]> max){
 // 			max = arr[i];
 // 		}
-// 		return max();
+// 		if(arr[i] <min) {
+// 			min = arr[i];
+// 		}
+// 		console.log(min);
+// 		console.log(max);
 // 	}
-// 	console.log(findDiff(arr));
+// 	console.log(findDiff(1,2,200,100,3,30));
 
 
 //  // ----Question 8
@@ -206,27 +227,41 @@
 // console.log(timeConvert(90)); 
 
 
-
+// function timeConvert(num) {
+// 	return parseInt(num / 60) = ":" + num % 60;
+// }
+// 	console.log(timeConvert(70))
 
 
 //  // ----Question 9
 
 
 // function findStr(str, long) {
-
-// 	let len = str.length;
-// 	let longArr = [];
+// 	var len = str.length;
+// 	var longArr = [];
 // 	//split the length = 2
-// 	for (let i=0; i<long.length; i++) {
-// 		(long.slice(i,i+len))
-// 	};
-// 	if (str == "h") {
-// 		result = true;
-// 	} else {
+// 	for (var i=0; i+len < long.length; i++) {
+// 	if (long.slice(i,i+len) === str)
+// 	}; else {
 // 		result = false;
 // 	}
 // }
-//  console.log(findStr("h", "hello"))
+//  console.log(findStr("h", "ashewhash"))
+
+
+// function findStr(str, long) {
+// 	var myArray = long.split("");
+// 	var counter = 0;
+// 	for(var i=0; str.length+i <= long.length;i++) {
+// 		if(long.slice(i, str.length + i) === str) {
+// 			counter ++;
+// 		}
+// 	}
+// 	return counter;
+// }
+// console.log(hi, asdfhiadfhiasdfhi)
+
+
 
 
 //  // ----Question 10
