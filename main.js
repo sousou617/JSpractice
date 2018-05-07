@@ -300,21 +300,39 @@
 //                 return false;
 //             }
 //         }
-        
 //         return true;
 //     }
-
-    
 //     for (var i = left; i <= right; i++){
 //         if (selfDiv(i)) {
 //             nums.push(i);
 //         }
 //     }
-    
 //     return nums;
 // };
 
 // console.log(selfDividingNumbers(1,22))
+
+
+// function selfDividingNumbers(left, right) {
+// 	let myArray = [];
+// 	for(let i=left; i<= right; i++) {
+// 		if(isSelfDividing(i)) {
+// 			myArray.push(i);
+// 		}
+// 	}
+// 	return myArray;
+// }
+
+// function isSelfDividing(num) {
+// 	var myArray = num.toString().split("")
+// 	for(let i = 0; i<myArray.length; i++){
+// 		if(num % parseInt(myArray[i]) != 0) {
+// 			return false;
+// 		}
+// 	}
+// 	return true;
+// }
+// 	console.log(selfDividingNumbers(5,22))
 
 
 //  // ----Question EC
